@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.4em;
+    color: #333;
+}
+.cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.car {
+    box-sizing: border-box;
+    width: 30%;
+    border: solid 1px #eee;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 25px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+.car h2{
+    margin: 0 0 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #666;
+}
+.car img { 
+    width: 100%;
+    height: auto;
+}
+.car dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.car dl > * {
+    width: 50%;
+    margin: 0;
+}
+.car dt {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #666;
+}
+.car dd {
+    text-align: right;
+}
+.color {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,.5);
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.color-small {
+    display: block;
+    float:left;
+    width: 1%;
+    height:1vh;
+
+}
