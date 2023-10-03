@@ -1,0 +1,17 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    box-sizing: border-box;
+    max-width: 30%;
+    border: solid 1px #eee;
+    border-radius: 5px;
+    padding: 20px;
+}
+.project img {
+    max-width: 100%;
+    height: auto;
+}

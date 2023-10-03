@@ -17,6 +17,9 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 nodejs_version: "16"
+host_webserver_port: "1000"
+host_https_port: "1001"
+host_db_port: "1002"
 
 # Key features of ddev's config.yaml:
 
