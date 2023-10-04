@@ -1,6 +1,5 @@
 <div class="project">
     <h2>
-        <?php echo $project['title']; ?>
         <?= $project['title']; ?>
     </h2>
     <img src="">
