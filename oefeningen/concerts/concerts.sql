@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.4.28-MariaDB-1:10.4.28+maria~ubu2004-log)
 # Database: db
-# Generation Time: 2023-10-17 11:27:38 +0000
+# Generation Time: 2023-10-17 12:17:10 +0000
 # ************************************************************
 
 
@@ -102,6 +102,33 @@ VALUES
 	(5,'Vorst nationaal');
 
 /*!40000 ALTER TABLE `locations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table reviews
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `reviews`;
+
+CREATE TABLE `reviews` (
+  `review_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `concert_id` int(11) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `score` int(11) DEFAULT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+LOCK TABLES `reviews` WRITE;
+/*!40000 ALTER TABLE `reviews` DISABLE KEYS */;
+
+INSERT INTO `reviews` (`review_id`, `concert_id`, `name`, `email`, `score`, `description`)
+VALUES
+	(1,1,'Dieter De Weirdt','dieter@deweirdt.be',4,'Top show!!!'),
+	(2,1,'Evelien Rutsaert','evelien.rutsaert@arteveldehs.be',5,'Het was genieten met de kindjes van begin tot einde.');
+
+/*!40000 ALTER TABLE `reviews` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
