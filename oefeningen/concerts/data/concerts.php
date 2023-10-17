@@ -2,7 +2,10 @@
 
 $locations = [
     'AB',
-    'Sportpaleis'
+    'Sportpaleis',
+    'Lotto arena',
+    'Vorst nationaal',
+    'Plopsaland De Panne'
 ];
 
 $concerts = [
@@ -45,7 +48,7 @@ $concerts = [
         'concert' => 'Andre Rieu in Antwerpen',
         'artist' => 'Andre Rieu',
         'date' => '2024-01-06',
-        'location' => 'Sportpaleis Antwerpen',
+        'location' => 'Sportpaleis',
         'price' => 99
     ],    
 ];
