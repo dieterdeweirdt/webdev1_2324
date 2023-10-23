@@ -3,6 +3,19 @@ require_once 'includes/db.php';
 
 $v_id = $_GET['id'];
 
+if( isset( $_POST['message'] ))
+{
+    //Bericht toevoegen
+    $sql = "INSERT INTO message (user_id, team_id, message, created_on) 
+            VALUES (:user_id, :team_id, :message, NOW() );";
+    $stmnt = $db->prepare($sql);
+    $stmnt->bindValue(':user_id', 7);
+    $stmnt->bindValue(':team_id', $v_id);
+    $stmnt->bindValue(':message', $_POST['message']);
+    $stmnt->execute();
+}
+
+//Alle berichten ophalen
 $sql = "SELECT * FROM message 
         JOIN user ON message.user_id = user.user_id 
         WHERE team_id = :temp_id ";
@@ -36,9 +49,9 @@ $messages = $stmnt->fetchAll(PDO::FETCH_OBJ);
             include 'views/message_item.php';
         } ?>
 
-        <form>
+        <form method="POST">
             <div class="inner">
-                <input type="text">
+                <input type="text" name="message">
                 <input type="submit" value="Send">
             </div>
         </form>
