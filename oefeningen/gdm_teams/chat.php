@@ -3,14 +3,14 @@ require_once 'includes/db.php';
 
 $v_id = $_GET['id'];
 
-$sql = "SELECT * FROM message WHERE team_id = :temp_id";
+$sql = "SELECT * FROM message 
+        JOIN user ON message.user_id = user.user_id 
+        WHERE team_id = :temp_id ";
+
 $stmnt = $db->prepare($sql);
 $stmnt->bindParam(':temp_id', $v_id);
 $stmnt->execute();
 $messages = $stmnt->fetchAll(PDO::FETCH_OBJ);
-
-print_r($messages);
-
 
 ?><!DOCTYPE html>
 <html lang="en">
