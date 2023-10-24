@@ -15,6 +15,11 @@
         <li><a href="fileshare/">FileShare</a></li>
         <li><a href="concerts/">Concerts</a></li>
         <li><a href="gdm_teams/">GDM Teams</a></li>
+        <li><a href="session_cookie/">Session and Cookie</a>
+            <ul>
+                <li><a href="session_cookie/password.php">Password hashing example</a></li>
+            </ul>
+        </li>
     </ul>
 </body>
 </html>
