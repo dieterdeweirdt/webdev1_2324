@@ -20,6 +20,8 @@
                 <li><a href="session_cookie/password.php">Password hashing example</a></li>
             </ul>
         </li>
+        <li><a href="cms/">cms</a></li>
+        <li><a href="oop/">Object Oriented Programming</a></li>
     </ul>
 </body>
 </html>
