@@ -10,11 +10,19 @@
     <pre>
     <code>
 <?php
-$user = new stdClass();
-$user->firstname = 'John';
-$user->lastname = 'Doe';
+include 'models/user.php';
+include 'models/teacher.php';
+
+$user = new Teacher('Michael', 'Vanderpoorten');
+$user->age = 30;
+$user->courses = ['Mobile Development 1', 'UX/UI Design'];
+
+$user2 = new User();
+$user2->age = "41";
 
 var_dump($user);
+
+echo $user->getFullName();
 ?>
     </code>
     </pre>
