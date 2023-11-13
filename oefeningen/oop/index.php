@@ -22,7 +22,7 @@ $user2->age = "41";
 
 var_dump($user);
 
-echo $user->getFullName();
+echo $user->getTheRealCoursesString();
 ?>
     </code>
     </pre>

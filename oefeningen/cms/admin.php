@@ -1,17 +1,11 @@
 <?php
 require_once 'includes/db.php';
-require 'models/baseModel.php';
 require 'models/page.php';
-require 'models/project.php';
 
 $slug = $_GET['page'] ?? 'home';
 
-$pages = Page::getAll('pages');
+$pages = Page::getAll();
 $current_page = Page::getBySlug($slug);
-
-$project = Project::getById('projects', 2);
-
-var_dump($project);
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -28,9 +22,15 @@ var_dump($project);
         <a href="index.php?page=<?php echo $page->slug; ?>"><?php echo $page->name; ?></a>
     <?php endforeach; ?>
 
-    <h1><?= $current_page->title; ?></h1>
 
-    <?= $current_page->content; ?>
+    <form>
+        <input type="text" name="title" value="<?= $current_page->title; ?>">
+        <textarea name="content">
+        <?= $current_page->content; ?>
+        </textarea>
+    </form>
 
+
+    
 </body>
 </html>
