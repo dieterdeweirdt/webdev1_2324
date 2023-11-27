@@ -18,8 +18,6 @@ $router = new \Bramus\Router\Router();
 //$router->get('/', function() { echo 'Dit is de index vanuit de route'; });
 $router->setNamespace('\App\Controllers');
 $router->get('/', 'HomeController@index');
-$router->get('/nieuws/(\d+)', 'NewsController@detail');
-$router->get('/nieuws', 'NewsController@index');
 
 //Run
 $router->run();
