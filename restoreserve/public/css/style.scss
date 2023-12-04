@@ -1,0 +1,111 @@
+$dark: hsl(350, 94%, 20%);
+$primary: hsl(350, 76%, 41%);
+
+* { box-sizing: border-box;}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #444;
+    line-height: 1.5em;
+    margin: 0; padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+h1,h2,h3,h4 { margin-top: 0;}
+
+a:hover { color:$dark; }
+
+header {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: $primary;
+    display: flex; justify-content: space-between;
+    align-items: center; margin-bottom: 25px;
+    .team,.brand {
+        font-size: 2rem; color: #fff; text-decoration: none;
+        &:hover { color: #000;}
+    }
+    .user {
+        font-size: 1rem; color: #fff; text-transform: uppercase;
+        a { text-decoration: none; color: #fff; }
+        .badge { background-color: #fff; display: inline-block; padding: 0px 8px; border-radius: 40px; margin-left: 10px; color: $primary;}
+    }
+    form {
+        padding: 0;
+        display: flex;
+            max-width: 500px;
+        input {
+            border: none;
+            border-radius: 0;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+
+            padding: 12px 18px;
+            font-size: 1.15rem;
+            
+        }
+        button { border-radius: 0;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px; background-color: $dark; padding-left: 20px; padding-right: 30px; font-size: 1.1rem; }
+    }
+    nav {
+        a { color: #fff; display: inline-block; margin-left: 25px;
+        font-size: 1.15rem; text-decoration: none; }
+    }
+}
+img { max-width: 100%; height: auto;}
+
+section {
+    max-width: 900px;
+    margin: 0 auto 80px;
+
+    
+}
+
+footer {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: space-between;
+    .list-item {
+        box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+        border-radius: 3px;
+        width: 30%;
+        margin-right: 3%;        
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: #333;
+        .name { font-size: 1.5rem; padding: 4px 15px;}
+        .city { color: #999; padding: 0px 15px 10px;}
+        &:hover { color: $primary; background-color: lighten($primary, 50%); 
+            .city { color: $dark; padding: 0px 15px 10px;}
+        }
+    }
+}
+.detail {
+    display: flex;
+    align-items: stretch;
+    .info {position: relative; width: 50%; }
+    .text { position: absolute; background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5984987745098039) 67%, rgba(0,0,0,0) 100%);
+        color: #fff; text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 50px 30px 20px; width: 100%; bottom: 0; }
+    img { object-fit: cover; width: 100%; height: 100%;}
+    border-radius: 5px;
+    border:solid 1px #ddd; background-color: #fff;
+
+}
+form {
+    padding: 25px;
+    width: 50%; 
+    position: relative; 
+    label { display: block; margin-bottom: 10px;}
+    input, select, textarea { display: block; border: solid 1px #999; border-radius: 3px; padding: 6px 10px; width: 100%; }
+    button { background-color: $primary; color: #fff; border: none; padding: 8px 12px; border-radius: 3px; text-transform: uppercase;}
+}

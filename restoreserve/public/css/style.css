@@ -1,0 +1,224 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #444;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+}
+
+a:hover {
+  color: #630313;
+}
+
+header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #b81934;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+header .team, header .brand {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .team:hover, header .brand:hover {
+  color: #000;
+}
+
+header .user {
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header .user a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header .user .badge {
+  background-color: #fff;
+  display: inline-block;
+  padding: 0px 8px;
+  border-radius: 40px;
+  margin-left: 10px;
+  color: #b81934;
+}
+
+header form {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+}
+
+header form input {
+  border: none;
+  border-radius: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 12px 18px;
+  font-size: 1.15rem;
+}
+
+header form button {
+  border-radius: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #630313;
+  padding-left: 20px;
+  padding-right: 30px;
+  font-size: 1.1rem;
+}
+
+header nav a {
+  color: #fff;
+  display: inline-block;
+  margin-left: 25px;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+footer {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  justify-items: space-between;
+}
+
+.list .list-item {
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  width: 30%;
+  margin-right: 3%;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.list .list-item .name {
+  font-size: 1.5rem;
+  padding: 4px 15px;
+}
+
+.list .list-item .city {
+  color: #999;
+  padding: 0px 15px 10px;
+}
+
+.list .list-item:hover {
+  color: #b81934;
+  background-color: #f9d7dc;
+}
+
+.list .list-item:hover .city {
+  color: #630313;
+  padding: 0px 15px 10px;
+}
+
+.detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  border-radius: 5px;
+  border: solid 1px #ddd;
+  background-color: #fff;
+}
+
+.detail .info {
+  position: relative;
+  width: 50%;
+}
+
+.detail .text {
+  position: absolute;
+  background: black;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(67%, rgba(0, 0, 0, 0.598499)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.598499) 67%, rgba(0, 0, 0, 0) 100%);
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  padding: 50px 30px 20px;
+  width: 100%;
+  bottom: 0;
+}
+
+.detail img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  padding: 25px;
+  width: 50%;
+  position: relative;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input, form select, form textarea {
+  display: block;
+  border: solid 1px #999;
+  border-radius: 3px;
+  padding: 6px 10px;
+  width: 100%;
+}
+
+form button {
+  background-color: #b81934;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */

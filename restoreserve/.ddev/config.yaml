@@ -1,4 +1,4 @@
-name: MVCwebsite
+name: Restoreserve
 type: php
 docroot: public
 php_version: "8.0"

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RestoReserve</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand">RestoReserve</a>
+        <form class="search"><input type="search"><button type="submit">Zoeken</button></form>
+        <div class="user">
+            <a href="afspraken.html">Mijn afspraken <span class="badge">2</span></a>
+        </div>
+    </header>
+    <section class="detail">
+
+        <div class="info">
+            <div class="text">
+                <h1>Zilte <sup>***</sup></h1>
+                <p>Antwerpen</p>
+            </div>
+            <img src="images/zilte.jpg">
+        </div>
+        
+        
+        
+        <form>
+            <h2>Maak een afspraak</h2>
+            <div class="inner">
+                <label>
+                    Datum
+                    <input type="date" required>
+                </label>
+                <label>
+                    Tijdstip
+                    <select required>
+                        <option value="">Selecteer het tijdstip van aankomst...</option>
+                        <option>12:00</option>
+                        <option>12:30</option>
+                        <option>13:00</option>
+                        <option>13:30</option>
+                        <option>18:00</option>
+                        <option>18:30</option>
+                        <option>19:00</option>
+                        <option>19:30</option>
+                        <option>20:00</option>
+                    </select>
+                </label>
+                <label>
+                    Aantal personen
+                    <input type="number" min="1" max="10" required>
+                </label>
+                <label>
+                    Naam
+                    <input type="text" required>
+                </label>
+                <label>
+                    E-mail
+                    <input type="email" required>
+                </label>
+                <label>
+                    Opmerkingen
+                    <textarea></textarea>
+                </label>
+                <button type="submit">Maak afspraak</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        &copy; RestoReserve - STUDENTNAAM - Arteveldehogeschool
+    </footer>
+</body>
+</html>
