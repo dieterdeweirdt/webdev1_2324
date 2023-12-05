@@ -17,7 +17,8 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $router = new \Bramus\Router\Router();
 //$router->get('/', function() { echo 'Dit is de index vanuit de route'; });
 $router->setNamespace('\App\Controllers');
-$router->get('/', 'HomeController@index');
+$router->get('/', 'FlightController@index');
+$router->get('/flight/(.*)', 'FlightController@detail');
 
 //Run
 $router->run();
