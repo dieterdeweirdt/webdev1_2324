@@ -10,7 +10,7 @@ class FlightController extends BaseController {
 
         $flights = Flight::getAll();
 
-        self::loadView('/home', [
+        self::loadView('/flight/list', [
             'title' => 'Homepage',
             'flights' => $flights
         ]);
@@ -22,7 +22,7 @@ class FlightController extends BaseController {
 
         //print_r($flight);
 
-        self::loadView('/flight', [
+        self::loadView('/flight/detail', [
             'title' => 'Flight detail',
             'flight' => $flight
         ]);
