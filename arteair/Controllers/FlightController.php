@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Models\Aircraft;
 use App\Models\Flight;
+use App\Models\Order;
 
 class FlightController extends BaseController {
 
@@ -24,9 +26,35 @@ class FlightController extends BaseController {
 
         self::loadView('/flight/detail', [
             'title' => 'Flight detail',
-            'flight' => $flight
+            'flight' => $flight,
+            'aircraft' => Aircraft::find($flight->aircraft_id)
         ]);
 
+
+    }
+
+    public static function order ($id) {
+        print_r($_POST);
+        exit;
+
+        //todo: save order to database
+
+        $order = new Order();
+        $order->firstname = $_POST['firstname'];
+        $order->lastname = $_POST['lastname'];
+        $order->email = $_POST['email'];
+        $order->save();
+
+
+        //todo: lus over seats en save to database
+
+        foreach($_POST['seats'] as $seat) {
+            //insert into best in een model
+        }
+
+
+
+        print_r($order);
 
     }
 

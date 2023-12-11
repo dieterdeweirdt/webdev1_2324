@@ -3,16 +3,21 @@
 <h1><?= $flight->from_name ?> -> <?= $flight->to_name ?> </h1>
 <h3><?= $flight->date; ?></h3>
 <p>€ 199,99 &bull; 777-31H &bull; Boeing 777</p>
-<form method="POST" action="./place_order.php">
+<form method="POST" action="">
 <div class="order_form">
     <div class="seats">
-        <div class="row">
-            <span>1</span>
-            <div class="seat seat-ordered">A</div>
-            <div class="spacer"></div>
-            <div class="seat">B<input type="checkbox" name="TODO" value="TODO"></div>      
-        </div>
-    </div>
+        
+
+            <?php 
+            print_r($aircraft->row_layout);
+            for($i = 1; $i <= $aircraft->rows; $i++) {
+                echo "<div class='row'><span>$i</span>";
+                foreach(str_split($aircraft->row_layout) as $seat) {
+                    include '_partial/seat.php';
+                }
+                echo "</div>";
+            }?>
+ 
     <div class="form">
         Uw voornaam:   <input type="text" name="firstname" >  <br>
         Uw naam:   <input type="text" name="lastname">  <br>

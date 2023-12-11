@@ -1,0 +1,1 @@
+<div class="seat"><?= $seat; ?><input type="checkbox" name="seat[]" value="<?= $i . $seat; ?>"></div>   

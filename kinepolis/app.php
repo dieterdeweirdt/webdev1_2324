@@ -17,22 +17,8 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $router = new \Bramus\Router\Router();
 //$router->get('/', function() { echo 'Dit is de index vanuit de route'; });
 $router->setNamespace('\App\Controllers');
-$router->get('/', 'FlightController@index');
-$router->get('/flight/(.*)', 'FlightController@detail');
-$router->post('/flight/(.*)', 'FlightController@order');
-
-$router->get('/qr/(.*)', function($url) {
-    $qr = new \Endroid\QrCode\QrCode($url);
-    $writer = new \Endroid\QrCode\Writer\PngWriter();
-    $data = $writer->write($qr);
-    header('Content-Type: image/png');
-    echo $data->getString();
-});
-
-$router->get('/(.*)', function($url) {
-    header('Location: /');
-    //echo '404: ' . $url . ' not found';
-});
+$router->get('/', 'MovieController@list');
+$router->get('/movie/(.*)', 'MovieController@detail');
 
 //Run
 $router->run();
