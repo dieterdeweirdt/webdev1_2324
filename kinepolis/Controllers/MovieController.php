@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Comment;
 use App\Models\Movie;
 
 class MovieController extends BaseController {
@@ -20,14 +21,13 @@ class MovieController extends BaseController {
 
         //1 film ophalen adhv id
         $movie = Movie::find($id);
-
-        print_r($movie);
-
-        //Haal ook de schedule (JOIN schedule en de rooms)
-
-        print_r($movie->getSchedule());
+        $comments = Comment::getByMovieId($id);
 
         //doorsturen naar de view
+        self::loadView( '/movie/detail', [
+            'movie' => $movie,
+            'comments' => $comments
+        ] );
     }
 
 }
