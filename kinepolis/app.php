@@ -20,5 +20,7 @@ $router->setNamespace('\App\Controllers');
 $router->get('/', 'MovieController@list');
 $router->get('/movie/(.*)', 'MovieController@detail');
 
+$router->get('/api/movie/(.*)/comments/(.*)', 'MovieController@getComments');
+
 //Run
 $router->run();

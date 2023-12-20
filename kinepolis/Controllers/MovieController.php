@@ -30,4 +30,12 @@ class MovieController extends BaseController {
         ] );
     }
 
+    public function getComments($movie_id, $page = 1)  {
+        $comments = Comment::getByMovieId($movie_id, $page);
+
+        header('Content-Type: application/json');
+        echo json_encode($comments);
+       
+    }
+
 }
